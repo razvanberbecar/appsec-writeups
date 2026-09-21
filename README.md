@@ -43,6 +43,15 @@ code, or an authorization decision.
   (privilege escalation) and horizontal (IDOR), covering forgeable cookies, mass
   assignment, header/method/multi-step bypasses, and identifier leakage. The core
   lesson: authentication is not authorization.
+- **[Authentication](web-security/authentication.md)** — username enumeration
+  (via differing responses and response timing), two 2FA logic bypasses, and
+  brute-forcing a password-derived "stay logged in" cookie. The thread:
+  authentication is a chain of links, and the server must never trust a
+  client-supplied identity.
+- **[OAuth](web-security/oauth.md)** — logging in as another user by editing the
+  email in the client app's `/authenticate` call during the OAuth implicit flow.
+  A protocol-flow bug, not an input bug: the app trusts an identity the browser
+  asserts instead of verifying the token server-side.
 
 ## Recurring themes
 
