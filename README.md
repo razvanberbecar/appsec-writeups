@@ -52,6 +52,11 @@ code, or an authorization decision.
   email in the client app's `/authenticate` call during the OAuth implicit flow.
   A protocol-flow bug, not an input bug: the app trusts an identity the browser
   asserts instead of verifying the token server-side.
+- **[SSRF](web-security/ssrf.md)** — making the server issue requests on my
+  behalf: reaching its own loopback, scanning the internal network with Intruder,
+  beating a blacklist filter with alternate IP/encoding, and beating a strict
+  allowlist by chaining an open redirect. The server is a trusted messenger you
+  aim at targets you can't reach yourself.
 
 ## Recurring themes
 
